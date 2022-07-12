@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accessible-form</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Please enter your contact details</legend>
+            <label for="name">
+                Your name (required):
+                <input type="text" id="name" name="name" required aria-required="true">
+            </label><br>
+            <label for="email">
+                E-Mail addres (required):
+                <input type="email" id="email" name="email" required aria-required="true">
+            </label><br>
+            <label for="phone">
+                Phone number (+57) (optional):
+                <input type="number" id="phone" name="phone" required aria-required="true">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Please select the courses that you are interested in (required):</legend>
+            <label for="web_dev">
+                <input type="checkbox" name="type?dev" id="web_dev" >
+                Web Developer
+            </label><br>
+            <label for="react_dev">
+                <input type="checkbox" name="type?dev" id="react_dev">
+                React Developer
+            </label><br>
+            <label for="full_dev">
+                <input type="checkbox" name="type?dev" id="full_dev">
+                Fullstack Developer
+            </label><br>
+            <label for="other">
+                <input type="checkbox" name="type?dev" id="other">
+                Other
+            </label><br>
+        </fieldset>
+        <label for="meessage">
+            Please enter a message (optional): <br>
+            <textarea id="message" name="message" cols="50" rows="5" required></textarea>
+        </label><br>
+        <button aria-label="this button send the form" type="submit">Send message</button>
+        <button aria-label="this button clear the form">Reset form</button>
+    </form>
+</body>
+</html>
